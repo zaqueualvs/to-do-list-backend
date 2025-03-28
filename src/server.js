@@ -3,7 +3,6 @@ import 'dotenv/config';
 
 const PORT = process.env.PORT || 3333;
 
-app.listen({
-  host: '0.0.0.0',
-  port: PORT,
-});
+app.listen(PORT, '0.0.0.0', () =>
+  console.log(`Serve is running on port ${PORT}`)
+);
