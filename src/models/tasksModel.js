@@ -11,7 +11,7 @@ const createTask = async (task) => {
   const dateUTC = new Date(Date.now()).toUTCString();
 
   const createdTask = await connection`
-    INSERT INTO tasks(title, status, created_at) VALUES (${title}, 'pendende', ${dateUTC})
+    INSERT INTO tasks(title, status, created_at) VALUES (${title}, 'Pendente', ${dateUTC})
     `;
 
   return { insertId: createdTask.insertId };
